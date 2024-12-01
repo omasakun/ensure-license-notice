@@ -6,10 +6,10 @@
 // If a copy of the MPL was not distributed with this file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 import { Command } from 'commander'
-import { createHash } from 'crypto'
-import { readFileSync, statSync } from 'fs'
 import { globby } from 'globby'
-import { join, relative, resolve } from 'path'
+import { createHash } from 'node:crypto'
+import { readFileSync, statSync } from 'node:fs'
+import { join, relative, resolve } from 'node:path'
 import stripJsonComments from 'strip-json-comments'
 
 const program = new Command()
