@@ -47,13 +47,13 @@ npx ensure-license-notice
 
 The configuration file is a JSON file with the following structure:
 
-```json
+```jsonc
 {
   "$schema": "node_modules/ensure-license-notice/schema.json",
   "licenseHash": "3f3d9e0024b1921b067d6f7f88deb4a60cbe7a78e76c64e3f1d7fc3b779b9d04",
   "notice": [
     "This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0.",
-    "If a copy of the MPL was not distributed with this file, You can obtain one at https://mozilla.org/MPL/2.0/."
+    "If a copy of the MPL was not distributed with this file, You can obtain one at https://mozilla.org/MPL/2.0/.",
   ],
   "excludedPrefix": [".git/", ".husky/", "LICENSE"],
   "excludedSuffix": [
@@ -64,9 +64,9 @@ The configuration file is a JSON file with the following structure:
     ".npmrc",
     ".prettierrc",
     ".tool-versions",
-    ".yaml"
+    ".yaml",
   ],
-  "excluded": ["src/third-party.ts"]
+  "excluded": ["src/third-party.ts"],
 }
 ```
 
