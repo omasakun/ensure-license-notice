@@ -1,0 +1,48 @@
+{
+  "name": "ensure-license-notice",
+  "version": "0.1.0",
+  "description": "Ensure that all source files contain a license notice",
+  "repository": "https://github.com/omasakun/ensure-license-notice",
+  "author": "omasakun",
+  "license": "MPL-2.0",
+  "type": "module",
+  "packageManager": "pnpm@9.13.2",
+  "scripts": {
+    "prepare": "husky install",
+    "build": "tsc",
+    "dev": "tsc && node dist/index.js"
+  },
+  "bin": {
+    "ensure-license-notice": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "schema.json"
+  ],
+  "dependencies": {
+    "commander": "^12.1.0",
+    "globby": "^14.0.2",
+    "strip-json-comments": "^5.0.1"
+  },
+  "devDependencies": {
+    "@tsconfig/node22": "^22.0.0",
+    "@types/node": "^20.17.9",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.3.0",
+    "prettier": "^3.4.1",
+    "typescript": "^5.7.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*": [
+      "node dist/index.js"
+    ],
+    "*.{json,ts}": [
+      "prettier --write"
+    ]
+  }
+}

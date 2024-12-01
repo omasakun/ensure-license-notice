@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "licenseHash": {
+      "type": "string",
+      "description": "The SHA-256 hash of the LICENSE file content"
+    },
+    "notice": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "An array of strings representing the license notice that should be present in each file"
+    },
+    "excludedPrefix": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "An array of file path prefixes to exclude from the check"
+    },
+    "excludedSuffix": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "An array of file path suffixes to exclude from the check"
+    },
+    "excluded": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "An array of specific file paths to exclude from the check"
+    }
+  },
+  "required": ["licenseHash", "notice", "excludedPrefix", "excludedSuffix", "excluded"]
+}

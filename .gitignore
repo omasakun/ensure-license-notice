@@ -1,3 +1,5 @@
+/dist/
+
 # auto generated
 .pnpm-store/
 node_modules/
