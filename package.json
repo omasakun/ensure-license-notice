@@ -2,13 +2,17 @@
   "name": "ensure-license-notice",
   "version": "0.1.1",
   "description": "Ensure that all source files contain a license notice",
-  "repository": "https://github.com/omasakun/ensure-license-notice",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omasakun/ensure-license-notice.git"
+  },
   "author": "omasakun",
   "license": "MPL-2.0",
   "type": "module",
   "packageManager": "pnpm@9.13.2",
   "scripts": {
     "prepare": "husky",
+    "prepublish": "npm run build",
     "build": "tsc",
     "dev": "tsc && node dist/index.js"
   },
@@ -31,11 +35,6 @@
     "lint-staged": "^13.3.0",
     "prettier": "^3.4.1",
     "typescript": "^5.7.2"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "lint-staged": {
     "*": [
