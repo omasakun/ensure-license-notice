@@ -11,7 +11,7 @@ First, install the required packages and set up Husky:
 
 ```bash
 npm install --save-dev husky lint-staged ensure-license-notice
-npm husky init
+npx husky init
 echo 'npx lint-staged' > .husky/pre-commit
 chmod +x .husky/pre-commit
 ```
@@ -25,6 +25,10 @@ Then, add the following configuration to `package.json`:
   }
 }
 ```
+
+Now, Husky will run `ensure-license-notice` before committing changes.
+
+Set up the configuration file (`notice.json`) as described below.
 
 ## Usage
 
@@ -45,7 +49,7 @@ The configuration file is a JSON file with the following structure:
 
 ```json
 {
-  "$schema": "./schema.json",
+  "$schema": "node_modules/ensure-license-notice/schema.json",
   "licenseHash": "3f3d9e0024b1921b067d6f7f88deb4a60cbe7a78e76c64e3f1d7fc3b779b9d04",
   "notice": [
     "This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0.",

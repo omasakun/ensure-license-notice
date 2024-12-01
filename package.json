@@ -1,6 +1,6 @@
 {
   "name": "ensure-license-notice",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Ensure that all source files contain a license notice",
   "repository": "https://github.com/omasakun/ensure-license-notice",
   "author": "omasakun",
@@ -8,7 +8,7 @@
   "type": "module",
   "packageManager": "pnpm@9.13.2",
   "scripts": {
-    "prepare": "husky install",
+    "prepare": "husky",
     "build": "tsc",
     "dev": "tsc && node dist/index.js"
   },
