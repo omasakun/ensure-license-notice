@@ -35,5 +35,5 @@
       "description": "An array of specific file paths to exclude from the check"
     }
   },
-  "required": ["licenseHash", "notice", "excludedPrefix", "excludedSuffix", "excluded"]
+  "required": ["notice"]
 }

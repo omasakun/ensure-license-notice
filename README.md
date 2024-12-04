@@ -1,9 +1,14 @@
+<br>
 <div align="center">
   <h1>Ensure License Notice</h1>
   <p>Ensure that all source files contain a license notice</p>
 </div>
 <br>
 <br>
+
+If you use a license such as MPL-2.0, it is recommended to include a license notice in each source file.
+
+This simple tool ensures that all source files contain the license notice, with respect to the `.gitignore` file.
 
 ## Get started with [Husky](https://github.com/typicode/husky) & [Lint Staged](https://github.com/lint-staged/lint-staged)
 
@@ -69,6 +74,8 @@ The configuration file is a JSON file with the following structure:
   "excluded": ["src/third-party.ts"],
 }
 ```
+
+The license hash will be displayed the first time you run this tool.
 
 See [schema.json](./schema.json) for the schema definition.
 

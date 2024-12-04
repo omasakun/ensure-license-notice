@@ -16,6 +16,5 @@
     ".prettierrc",
     ".tool-versions",
     ".yaml"
-  ],
-  "excluded": []
+  ]
 }

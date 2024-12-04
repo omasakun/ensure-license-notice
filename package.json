@@ -1,6 +1,6 @@
 {
   "name": "ensure-license-notice",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Ensure that all source files contain a license notice",
   "repository": {
     "type": "git",
@@ -9,7 +9,6 @@
   "author": "omasakun",
   "license": "MPL-2.0",
   "type": "module",
-  "packageManager": "pnpm@9.13.2",
   "scripts": {
     "prepare": "husky",
     "prepublish": "npm run build",
@@ -23,6 +22,12 @@
     "dist",
     "schema.json"
   ],
+  "keywords": [
+    "license",
+    "copyright",
+    "header"
+  ],
+  "packageManager": "pnpm@9.13.2",
   "dependencies": {
     "commander": "^12.1.0",
     "globby": "^14.0.2",

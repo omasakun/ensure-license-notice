@@ -27,11 +27,11 @@ const configPath = resolve(ROOT, options.config)
 const configContent = readFileSync(configPath, 'utf8')
 const config = JSON.parse(stripJsonComments(configContent))
 
-const LICENSE_HASH: string = config.licenseHash
+const LICENSE_HASH: string = config.licenseHash ?? ''
 const NOTICE: string[] = config.notice
-const EXCLUDED_PREFIX: string[] = config.excludedPrefix
-const EXCLUDED_SUFFIX: string[] = config.excludedSuffix
-const EXCLUDED: string[] = config.excluded
+const EXCLUDED_PREFIX: string[] = config.excludedPrefix ?? []
+const EXCLUDED_SUFFIX: string[] = config.excludedSuffix ?? []
+const EXCLUDED: string[] = config.excluded ?? []
 
 if (!statSync(join(ROOT, 'LICENSE')).isFile()) {
   console.log('LICENSE is missing in the root directory')
