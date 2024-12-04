@@ -11,7 +11,7 @@
   "type": "module",
   "scripts": {
     "prepare": "husky",
-    "prepublish": "npm run build",
+    "prepublishOnly": "npm run build",
     "build": "tsc",
     "dev": "tsc && node dist/index.js"
   },
